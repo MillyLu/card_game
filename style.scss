@@ -1,0 +1,96 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "StratosSkyeng", sans-serif;
+}
+
+.center {
+    padding-left: calc(50% - 512px);
+    padding-right: calc(50% - 512px);
+}
+
+.container {
+    background: #004980;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.choose {
+    background: #C2F5FF;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    justify-content: center;
+    align-items: center;
+    width: 480px;
+
+}
+
+.choose__title {
+    padding-top: 52px;
+    width: 208px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #004980;
+}
+
+.choose__level {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+
+
+}
+
+.choose__btn {
+    margin-top: 19px;
+    margin-bottom: 48px;
+    width: 246px;
+    height: 50px;
+    background: #7AC100;
+    border-radius: 12px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    align-items: center;
+    text-align: center;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #FFFFFF;
+}
+
+.level {
+    width: 98px;
+    height: 98px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 72px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: #0080C1;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'StratosSkyeng';
+    font-style: normal;
+    font-weight: 400;
+    src: url('statosskyeng-v1.001/Web fonts/stratosskyengweb-regular.woff2') format('woff2'),
+        url('statosskyeng-v1.001/Web fonts/stratosskyengweb-regular.woff') format('woff');
+}
