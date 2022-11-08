@@ -1,7 +1,6 @@
 const levels = document.querySelector('.choose__level');
 let userLevel;
 
-
 levels.addEventListener('click', (event) => {
     event.preventDefault();
     const target = event.target;
@@ -11,5 +10,4 @@ levels.addEventListener('click', (event) => {
         localStorage.setItem('level', userLevel);
         window.location.href = 'game.html';
     }
-})
-
+});
