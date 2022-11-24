@@ -63,9 +63,7 @@
             const cards = document.querySelectorAll('.card__field_card');
             cards.forEach((card) => {
                 let data = card.dataset;
-                card.style.backgroundImage = `url('src/style/image/${String(
-                    data.card
-                )}.png')`;
+                card.style.backgroundImage = `url('static/image/${String(data.card)}.png')`;
             });
         </script>
     </body>

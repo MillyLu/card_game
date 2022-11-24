@@ -11,7 +11,10 @@
         "lint-stage": "stylelint ./src/**/*.css --fix",
         "lint-stage-scss": "stylelint ./src/**/*.scss --fix",
         "prepare": "husky install",
-        "lint": "npm run lint:js && npm run lint:css"
+        "lint": "npm run lint:js && npm run lint:css",
+        "start": "webpack-dev-server --open",
+        "build": "webpack",
+        "prod": "cross-env NODE_ENV=production webpack"
     },
     "repository": {
         "type": "git",
@@ -24,11 +27,20 @@
     },
     "homepage": "https://github.com/MillyLu/card_game#readme",
     "devDependencies": {
+        "copy-webpack-plugin": "^11.0.0",
+        "cross-env": "^7.0.3",
+        "css-loader": "^6.7.2",
+        "css-minimizer-webpack-plugin": "^4.2.2",
         "eslint": "^8.26.0",
         "eslint-config-prettier": "^8.5.0",
         "eslint-plugin-prettier": "^4.2.1",
+        "html-webpack-plugin": "^5.5.0",
         "husky": "^8.0.1",
+        "mini-css-extract-plugin": "^2.7.0",
+        "postcss-loader": "^7.0.1",
         "prettier": "^2.7.1",
+        "sass-loader": "^13.2.0",
+        "style-loader": "^3.3.1",
         "stylelint": "^14.14.1",
         "stylelint-config-prettier": "^9.0.3",
         "stylelint-config-rational-order": "^0.1.2",
@@ -36,6 +48,9 @@
         "stylelint-order": "^5.0.0",
         "stylelint-prettier": "^2.0.0",
         "stylelint-scss": "^4.3.0",
-        "vnu-jar": "^22.9.29"
+        "vnu-jar": "^22.9.29",
+        "webpack": "^5.75.0",
+        "webpack-cli": "^5.0.0",
+        "webpack-dev-server": "^4.11.1"
     }
 }
