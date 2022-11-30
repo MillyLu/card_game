@@ -28,6 +28,10 @@ body {
     background: #004980;
 }
 
+.app {
+    position: relative;
+}
+
 .choose {
     display: -webkit-box;
     display: flexbox;
@@ -111,12 +115,13 @@ body {
 }
 
 .game {
+    position: relative;
     display: -webkit-box;
     display: flexbox;
     display: flex;
+    flex-direction: column;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    flex-direction: column;
 }
 
 .header {
@@ -240,6 +245,108 @@ body {
     height: 100%;
     object-fit: cover;
     visibility: hidden;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.result {
+    position: absolute;
+    top: 158px;
+    left: 272px;
+    z-index: 3;
+    display: -webkit-box;
+    display: flexbox;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 480px;
+    height: 459px;
+    background: #c2f5ff;
+    border-radius: 12px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+}
+
+.result__img {
+    width: 96px;
+    height: 96px;
+    margin-bottom: 5px;
+}
+
+.result__title {
+    width: 256px;
+    height: 48px;
+    margin-bottom: 28px;
+    color: #004980;
+    font-weight: 400;
+    font-size: 40px;
+    font-family: StratosSkyeng, sans-serif;
+    font-style: normal;
+    line-height: 48px;
+    text-align: center;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+}
+
+.result__title_lose {
+    width: 276px;
+}
+
+.result__time {
+    width: 230px;
+    height: 32px;
+    margin-bottom: 10px;
+    color: #000;
+    font-weight: 400;
+    font-size: 24px;
+    font-family: StratosSkyeng, sans-serif;
+    font-style: normal;
+    line-height: 32px;
+    text-align: center;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+}
+
+.result__timer {
+    width: 155px;
+    height: 72px;
+    margin-bottom: 40px;
+    color: #000;
+    font-weight: 400;
+    font-size: 64px;
+    font-family: StratosSkyeng, sans-serif;
+    font-style: normal;
+    line-height: 72px;
+    text-align: center;
+}
+
+.result__button {
+    width: 246px;
+    height: 48px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 24px;
+    font-family: StratosSkyeng, sans-serif;
+    font-style: normal;
+    text-align: center;
+    background: #7ac100;
+    border: none;
+    border-radius: 12px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+}
+
+.opacity {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #004980;
+    opacity: 0.9;
 }
 
 @font-face {

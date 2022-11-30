@@ -9,7 +9,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 module.exports = {
     mode: isProduction ? 'production' : 'development',
     entry: {
-        main: path.resolve(__dirname, './src/scripts/level.js'),
+        main: path.resolve(__dirname, './src/scripts/level.ts'),
     },
     output: {
         path: path.resolve(__dirname, './dist'),
@@ -36,7 +36,15 @@ module.exports = {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
             },
+            {
+                test: /\.ts$/i,
+                use: 'ts-loader',
+                exclude: /node_modules/,
+            },
         ],
+    },
+    resolve: {
+        extensions: ['.ts', '.js'],
     },
     optimization: {
         minimizer: ['...', new CssMinimizerPlugin()],

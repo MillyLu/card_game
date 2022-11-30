@@ -1,6 +1,6 @@
-//import { app } from './level';
-import './variables.js';
-import { gameScreen } from './gameScreen.js';
+import './variables';
+import { gameScreen } from './gameScreen';
+import { cards } from './cards';
 
 export let userLevel;
 export function levelScreen(app) {
@@ -36,15 +36,14 @@ export function levelScreen(app) {
     levels.forEach((level) => {
         level.addEventListener('click', (e) => {
             e.preventDefault();
-            const target = e.target;
+            const target: any = e.target;
             userLevel = target.textContent;
             localStorage.setItem('level', userLevel);
-            gameScreen(app);
         });
     });
 
     button.addEventListener('click', (e) => {
         e.preventDefault();
-        window.location.href = 'game.html';
+        gameScreen(app);
     });
 }

@@ -35,7 +35,7 @@ export const cards = [
     'clubs_8',
     'clubs_7',
     'clubs_6',
-];
+] as const;
 
 function shuffle(array) {
     array.sort(() => Math.random() - 0.5);
