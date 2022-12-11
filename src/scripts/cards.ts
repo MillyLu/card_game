@@ -1,4 +1,4 @@
-export const cards = [
+export let cards = [
     'spades_A',
     'spades_K',
     'spades_Q',
@@ -35,9 +35,9 @@ export const cards = [
     'clubs_8',
     'clubs_7',
     'clubs_6',
-] as const;
+];
 
-function shuffle(array) {
+function shuffle(array: Array<string>) {
     array.sort(() => Math.random() - 0.5);
 }
 

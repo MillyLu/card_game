@@ -119,9 +119,9 @@ body {
     display: -webkit-box;
     display: flexbox;
     display: flex;
-    flex-direction: column;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
+    flex-direction: column;
 }
 
 .header {
@@ -225,8 +225,6 @@ body {
 
 .card__field_card:active {
     transform: scale(0.97);
-    transform: rotateY(3.142rad);
-    transform: rotateY(3.142rad);
     transition: -webkit-transform 0.2s;
     transition: transform 0.2s;
     transition: transform 0.2s, -webkit-transform 0.2s;
@@ -259,19 +257,19 @@ body {
     display: -webkit-box;
     display: flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     width: 480px;
     height: 459px;
     background: #c2f5ff;
     border-radius: 12px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
 }
 
 .result__img {

@@ -7,12 +7,13 @@ export function init() {
     timer();
 }
 
-function tick() {
+export function tick() {
     seconds++;
     if (seconds >= 60) {
         minutes++;
         seconds = seconds - 60;
     }
+    //return seconds; // только для тестов!
 }
 function add() {
     tick();

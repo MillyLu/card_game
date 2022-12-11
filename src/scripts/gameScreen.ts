@@ -41,6 +41,7 @@ export function gameScreen(app) {
 
     let fragment = document.createDocumentFragment();
     let numCards;
+
     if (window.localStorage.level === '1') {
         numCards = 12;
     } else if (window.localStorage.level === '2') {
@@ -112,7 +113,7 @@ export function gameScreen(app) {
 
     shuffle(cards);
 
-    let tests = document.querySelectorAll('.card__field_card');
+    let currentArrayOfCards = document.querySelectorAll('.card__field_card');
 
     cardsForLevel = randomArray(cards, numCards / 2);
 
@@ -157,7 +158,7 @@ export function gameScreen(app) {
 
     function hide() {
         imagesFront.forEach((image: any) => {
-            image.style.transform = 'rotateY(3.142rad)';
+            //image.style.transform = 'rotateY(3.142rad)';
             image.style.visibility = 'hidden';
         });
     }
@@ -172,7 +173,7 @@ export function gameScreen(app) {
         return arr;
     }
 
-    tests.forEach((test) => {
+    currentArrayOfCards.forEach((test) => {
         test.addEventListener('onclick', () => {});
     });
 
@@ -183,10 +184,10 @@ export function gameScreen(app) {
         let target = event.target;
         console.dir(target);
         if (lockBoard) return;
-        if (target === firstCard) return; ///////////////this
+        if (target === firstCard) return;
         target.classList.add('flip');
         target.nextElementSibling.style.visibility = 'visible';
-        target.nextElementSibling.style.transform = 'rotateY(3.142rad)';
+        //target.nextElementSibling.style.transform = 'rotateY(3.142rad)';
 
         if (!hasFlippedCard) {
             hasFlippedCard = true;
@@ -203,7 +204,7 @@ export function gameScreen(app) {
         }
     };
 
-    tests.forEach((test) => {
+    currentArrayOfCards.forEach((test) => {
         test?.addEventListener('click', listener);
     });
 
